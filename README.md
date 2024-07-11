@@ -14,19 +14,6 @@ https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales?resource=download
 Monday:
 https://anca659390.monday.com/boards/1557405826
 
-
-
-Supermarkets Sales dataset from Kaggle:
-Sales data → 3 branches  →  3 months 
-(rows: 1,000, columns: 17)
-Business case:
-In which time range of the day are the clients buying more of a product line? 
-By gender: when they buy more? How much they buy per product line? 
-
-Definition of time range during the day to introduce a new product, for a specific product line. 
-Focusing marketing strategies according to the predominant gender of the clients per time range and product line
-
-Business Implications:
-
-Targeting clients
+Presentation:
+https://docs.google.com/presentation/d/1b0VKdvSROfvPZb68Nvb8i5f8_Pr2O5ScjyUuM7SGRdA/edit#slide=id.p
 
