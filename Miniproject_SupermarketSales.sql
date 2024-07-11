@@ -12,27 +12,19 @@ ORDER BY SUM(total) DESC;
 SELECT product_line, SUM(quantity) AS "total QTY", FORMAT(SUM(total),0) AS "total $" , round(SUM(total)/SUM(quantity),0) AS "avg price/unit"
 FROM supermarket_sales
 GROUP BY product_line
-HAVING SUM(total) = (   #sub-query from chatGPT
-    SELECT MAX(total_sum) 
-    FROM (
-        SELECT SUM(total) AS total_sum
-        FROM supermarket_sales
-        GROUP BY product_line
-    ) AS subquery
-);
+HAVING SUM(total) = (SELECT MAX(total_sum) 
+						FROM (SELECT SUM(total) AS total_sum
+								FROM supermarket_sales
+								GROUP BY product_line) AS subquery);
 
 # Health and Beauty has the lower value in total amount 49,194 and average 58 price/unit
 SELECT product_line, SUM(quantity) AS "total QTY", FORMAT(SUM(total),0) AS "total $" , round(SUM(total)/SUM(quantity),0) AS "avg price/unit"
 FROM supermarket_sales
 GROUP BY product_line
-HAVING SUM(total) = (   #sub-query from chatGPT
-    SELECT MIN(total_sum) 
-    FROM (
-        SELECT SUM(total) AS total_sum
-        FROM supermarket_sales
-        GROUP BY product_line
-    ) AS subquery
-);
+HAVING SUM(total) = (SELECT MIN(total_sum) 
+						FROM (SELECT SUM(total) AS total_sum
+								FROM supermarket_sales
+								GROUP BY product_line) AS subquery);
 
 
 # Check the spectrum of dates, it is from 10:00 to 20:59
@@ -226,11 +218,11 @@ SELECT
         WHEN time >= '16:00' AND time < '18:00' THEN 'late_afternoon'
         ELSE 'evening'
     END AS range_time,
-    COUNT(CASE WHEN gender = 'male' THEN 1 END) AS "male", #CHATGPT SUGGESTION
-    COUNT(CASE WHEN gender = 'female' THEN 1 END) AS "female" #CHATGPT SUGGESTION
+    COUNT(CASE WHEN gender = 'male' THEN 1 END) AS "male", 
+    COUNT(CASE WHEN gender = 'female' THEN 1 END) AS "female" 
 FROM supermarket_sales
 GROUP BY range_time
-ORDER BY COUNT(CASE WHEN gender = 'male' THEN 1 END) DESC; #CHATGPT SUGGESTION
+ORDER BY COUNT(CASE WHEN gender = 'male' THEN 1 END) DESC; 
 
 
 # GRAPHIC PRESENTATION!!! AMOUNT: TIME RANGE PER GENDER
@@ -247,7 +239,7 @@ SELECT
     FORMAT(SUM(CASE WHEN gender = 'female' THEN total ELSE 0 END),0) AS "female" #CHATGPT SUGGESTION
 FROM supermarket_sales
 GROUP BY range_time
-ORDER BY range_time; #CHATGPT SUGGESTION
+ORDER BY range_time; 
 
 
 # GENDER BY CATEGORY -AMOUNT- GRAPHIC
