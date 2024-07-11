@@ -8,17 +8,17 @@ USE supermarket_sales;
 CREATE VIEW qty_time_per_gender AS 
 SELECT
     CASE
-        WHEN time >= '10:00' AND time < '12:00' THEN 'morning'
-        WHEN time >= '12:00' AND time < '14:00' THEN 'midday'
-        WHEN time >= '14:00' AND time < '16:00' THEN 'early_afternoon'
-        WHEN time >= '16:00' AND time < '18:00' THEN 'late_afternoon'
-        ELSE 'evening'
+        WHEN time >= '10:00' AND time < '12:00' THEN '01_morning'
+        WHEN time >= '12:00' AND time < '14:00' THEN '02_midday'
+        WHEN time >= '14:00' AND time < '16:00' THEN '03_early_afternoon'
+        WHEN time >= '16:00' AND time < '18:00' THEN '04_late_afternoon'
+        ELSE '05_evening'
     END AS range_time,
     COUNT(CASE WHEN gender = 'male' THEN 1 END) AS "male",
     COUNT(CASE WHEN gender = 'female' THEN 1 END) AS "female" 
 FROM supermarket_sales
 GROUP BY range_time
-ORDER BY COUNT(CASE WHEN gender = 'male' THEN 1 END) DESC; 
+ORDER BY range_time; 
 
 
 # TIME RANGE PER GENDER PER AMOUNT BOUGHT: 
@@ -33,12 +33,14 @@ SELECT
         WHEN time >= '16:00' AND time < '18:00' THEN '04_late_afternoon'
         ELSE '05_evening'
     END AS range_time,
-    FORMAT(SUM(CASE WHEN gender = 'male' THEN total ELSE 0 END),0) AS "male", #CHATGPT SUGGESTION
-    FORMAT(SUM(CASE WHEN gender = 'female' THEN total ELSE 0 END),0) AS "female" #CHATGPT SUGGESTION
+    FORMAT(SUM(CASE WHEN gender = 'male' THEN total ELSE 0 END),0) AS "male", 
+    FORMAT(SUM(CASE WHEN gender = 'female' THEN total ELSE 0 END),0) AS "female" 
 FROM supermarket_sales
 GROUP BY range_time
 ORDER BY range_time; 
 
+SELECT*
+FROM amount_time_per_gender;
 
 # AMOUNT: GENDER PER PRODUCT LINE
 # MALE BUY MORE "HEALTH AND BEAUTY", FEMALE BUY MORE "FOOD AND BEVERAGES"
