@@ -1,6 +1,6 @@
 "range_time","male","female"
-"evening",151,130
-"early_afternoon",104,81
-"midday",85,107
-"morning",82,109
-"late_afternoon",77,74
+"01_morning",82,109
+"02_midday",85,107
+"03_early_afternoon",104,81
+"04_late_afternoon",77,74
+"05_evening",151,130
