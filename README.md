@@ -40,5 +40,6 @@ Monday:
 https://anca659390.monday.com/boards/1557405826
 
 Presentation:
-https://docs.google.com/presentation/d/1b0VKdvSROfvPZb68Nvb8i5f8_Pr2O5ScjyUuM7SGRdA/edit#slide=id.p
+https://docs.google.com/presentation/d/1b0VKdvSROfvPZb68Nvb8i5f8_Pr2O5ScjyUuM7SGRdA/edit?usp=sharing
+
 
