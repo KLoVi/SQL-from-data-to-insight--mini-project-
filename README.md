@@ -1,4 +1,4 @@
-# Supermarket Sales Analysis.
+# Supermarket Sales Analysis
 
 Using a Supermarkets dataset from Kaggle, containing sales data for 3 branches during 3 months, we address the following business questions: 
 1. Which time range of the day are the clients buying more of a product line? 
