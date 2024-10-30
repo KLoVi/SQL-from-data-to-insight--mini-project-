@@ -1,12 +1,28 @@
 # Supermarket Sales Analysis
 
-Using a Supermarkets dataset from Kaggle, containing sales data for 3 branches during 3 months, we address the following business questions: 
-1. Which time range of the day are the clients buying more of a product line? 
-2. By gender, which range of the day men and female buy more? How much more they buy per gender, per product line?
-   
-Having clear answers for these questions may lead to appropiate and decision to make more effective marketing campaigns, for example, and maxize resources to be effective to target and understanding the behaviour and preferences of the clients. 
-For our project, we started checking general characteristics of the DataSet in Python in order to explore it and evaluate if any cleaning action was needed. Then, we continued with the creation of an Entity-Relationship Diagram (ERD) in SQL, defining the data we wanted to retrieve from the original dataset. Then, we proceeded to create and populate a functional database accordingly, followed by the use  of SQL to run queries and start the analysis and find the answers for our business case. Finally we created views in SQL and the exported as .csv in order to used them in Python to encapsulate the main results in graphics.
-We found out that men and women buy more at the evening, followed by the early afternon for men and in the morning for women. Female buy more "Food and groceries" and men buy more "health and beauty" products. On the other hand, the bigger amount of sells of the following product lines are during the evening: "food and beverages", "health and beauty", "sports and travel" and "elecrtonic accesories". Altough "fashion accessories" are mostly sold during the morning and "home and lifestyle" are mostly sold during midday.
+This project utilizes a supermarket dataset from Kaggle, containing sales data from three branches over a three-month period, to address key business questions.
+
+**The main objectives of the project are as follows:
+1. Determine which time of day sees the highest sales for each product line.
+2. Analyze purchasing patterns by gender, including the time of day men and women tend to buy more, and quantify sales differences by product line.**
+
+Understanding these patterns can inform more effective marketing campaigns and optimize resource allocation to better target customer preferences and behaviors.
+
+The project workflow was as follows:
+
+**- Data Exploration: **We started by examining the general characteristics of the dataset in Python to evaluate its quality and determine if any data cleaning was necessary.
+**- Entity-Relationship Diagram (ERD):** We created an ERD in SQL to define the data to be extracted from the original dataset. A functional database was then created and populated based on this diagram.
+**- Data Analysis: **Using SQL, we ran queries to analyze the dataset and answer the key business questions. Views were created in SQL and exported as CSV files for further visualization in Python.
+**- Data Visualization:** Python was used to generate graphical representations of the key findings.
+
+Key Insights:
+
+- Men and women tend to buy more in the evening, with men also purchasing more in the early afternoon and women in the morning.
+- Women primarily purchase "Food and Groceries," whereas men tend to buy more "Health and Beauty" products.
+- The highest sales for "Food and Beverages," "Health and Beauty," "Sports and Travel," and "Electronic Accessories" occur during the evening. "Fashion Accessories" are mostly sold in the morning, and "Home and Lifestyle" products peak at midday.
+
+**These insights can help the business make informed decisions regarding product promotions, inventory management, and customer engagement strategies.
+**
 
 Kaggle: Supermarket Sales
 https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales?resource=download
