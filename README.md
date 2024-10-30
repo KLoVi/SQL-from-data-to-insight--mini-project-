@@ -25,6 +25,12 @@ Key Insights:
 - Women primarily purchase "Food and Groceries," whereas men tend to buy more "Health and Beauty" products.
 - The highest sales for "Food and Beverages," "Health and Beauty," "Sports and Travel," and "Electronic Accessories" occur during the evening. "Fashion Accessories" are mostly sold in the morning, and "Home and Lifestyle" products peak at midday.
 
+Example of Data Visualization:
+
+![image](https://github.com/user-attachments/assets/f01bd423-eca1-4ec1-912d-b09c5cad8df4)
+
+
+
 **These insights can help the business make informed decisions regarding product promotions, inventory management, and customer engagement strategies.**
 
 Kaggle: Supermarket Sales
